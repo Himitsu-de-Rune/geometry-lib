@@ -12,22 +12,22 @@ class Shape(ABC):
 class Circle(Shape):
     def __init__(self, radius: float):
         if radius <= 0:
-            raise ValueError("Радиус должен быть положительным")
+            raise ValueError('Радиус должен быть положительным')
         self.radius = radius
 
     def area(self) -> float:
         return math.pi * self.radius ** 2
 
     def __repr__(self):
-        return f"Circle(radius={self.radius})"
+        return f'Circle(radius={self.radius})'
 
 
 class Triangle(Shape):
     def __init__(self, a: float, b: float, c: float):
         if min(a, b, c) <= 0:
-            raise ValueError("Стороны должны быть положительными")
+            raise ValueError('Стороны должны быть положительными')
         if a + b <= c or a + c <= b or b + c <= a:
-            raise ValueError("Треугольник с такими сторонами не существует")
+            raise ValueError('Треугольник с такими сторонами не существует')
         self.a = a
         self.b = b
         self.c = c
@@ -41,4 +41,5 @@ class Triangle(Shape):
         return math.isclose(sides[0] ** 2 + sides[1] ** 2, sides[2] ** 2, rel_tol=1e-9)
 
     def __repr__(self):
-        return f"Triangle(a={self.a}, b={self.b}, c={self.c})"
+
+        return f'Triangle(a={self.a}, b={self.b}, c={self.c})'
