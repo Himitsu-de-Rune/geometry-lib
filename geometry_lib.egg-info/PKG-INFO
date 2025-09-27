@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: geometry-lib
+Version: 0.1.0
+Summary: Библиотека для вычисления площади фигур (круг, треугольник и др.)
+Author-email: Ваше Имя <you@example.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+
+# geometry-lib
+
+Простая библиотека для вычисления площади геометрических фигур.
+
+## Установка
+```bash
+pip install .
