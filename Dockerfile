@@ -6,7 +6,6 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip install --upgrade pip \
-    && pip install -e ".[dev]"
+RUN pip install --upgrade pip && pip install -e ".[dev]"
 
 CMD ["pytest", "-q"]
